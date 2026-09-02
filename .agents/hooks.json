@@ -1,0 +1,40 @@
+{
+  "safety-gate": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/safety-check.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "secret-scanner": {
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/secret-scanner.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "context-guard": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "./scripts/context-guard.sh",
+        "timeout": 5
+      }
+    ]
+  }
+}
