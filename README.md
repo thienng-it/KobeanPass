@@ -213,4 +213,6 @@ Distributed under the **MIT License**. See `LICENSE` for details.
 
 <div align="center">
   <sub>Crafted with passion for absolute privacy and digital sovereignty.</sub>
+  <br />
+  <sub>Joseph Thien ❤️ kobenguyent</sub>
 </div>
